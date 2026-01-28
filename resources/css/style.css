@@ -1,0 +1,24 @@
+/* navbar */
+.nav-custom{
+    background: #d3d3d3;
+}
+
+
+
+
+/* form-control crea post */
+.icon-user{
+    width:10%;
+    border-radius: 60%;
+}
+
+.form-post{
+    height:80px;
+    width:700px;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+}
+.input-post{
+    width:70%;
+    border-radius:20px;
+}
