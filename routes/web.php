@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\FaceController;
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('welcome');
-});
+//homepage
+Route::get('/', [FaceController::class, 'home'])->name("welcome");
+//index rotta
