@@ -1,7 +1,7 @@
-!-- Vertically centered scrollable modal -->
-<form  method="POST" action="" enctype="multipart/form-data">
-      @csrf
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" id="createpostmodal">
+<!--Vertically centered scrollable modal -->
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" id="createpostmodal">
+    <form method="POST" action="" enctype="multipart/form-data">
+        @csrf
         <div class="mb-3">
             <label for="title" class="form-label">titlo del post</label>
             <input type="text" class="form-control" name="title" id="title" placeholder="">
@@ -18,16 +18,8 @@
             <label for="img" class="form-label">Immagine:</label>
             <input type="file" class="form-control" id="img" placeholder="" name="img">
         </div>
-           <div>
+        <div>
             <button>Button</button>
-           </div>
-    </div>
-</form>
-
-
-
-
-
-
-
-
+        </div>
+    </form>
+</div>

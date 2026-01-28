@@ -1,8 +1,7 @@
 <nav class="navbar navbar-expand-lg nav-custom">
-  <div class="container-fluid">
+  <div class="d-flex justify-content-between w-100">
     <div class="d-flex">
-
-      <a class="navbar-brand" href=""><i class="fa-brands fa-facebook fa-2x "></i></a>
+      <a class="navbar-brand ms-3" href=""><i class="fa-brands fa-facebook fa-2x logo"></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -12,46 +11,57 @@
             <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </button> --}} -->
-        
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
         <i class="fa-solid fa-magnifying-glass fa-1x" type="submit"></i>
       </form>
     </div>
 
 
-    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-      <div class="d-flex gap-2">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-5">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route("welcome")}}"><i class="fa-solid fa-house fa-1x"></i></a>
+    <div class="d-flex">
+      <ul class="navbar-nav mb-2 mb-lg-0 gap-5">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{{route("welcome")}}"><i class="fa-solid fa-house fa-2x nav-icon"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-brands fa-youtube fa-2x nav-icon"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-people-group fa-2x nav-icon"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-gamepad fa-2x nav-icon"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="d-flex align-items-center gap-4">
+      <button type="button" class="btn position-relative ring-bell">
+        <i class="fa-solid fa-bell fa-lg"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          99+
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </button>
+      
+      <i class="fa-brands fa-facebook-messenger fa-lg"></i>
+        <a class="nav-link dropdown-toggle link-img me-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://picsum.photos/300/200" alt="" class="icon-right">
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Impostazioni e privacy</a></li>
+          <li><a class="dropdown-item" href="#">Assistenze e supporto</a></li>
+          <li>
+            <hr class="dropdown-divider">
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-brands fa-youtube fa-1x"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-solid fa-people-group fa-1x"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-solid fa-gamepad fa-1x"></i></a>
-          </li>
+          <li><a class="dropdown-item" href="#">Login</a></li>
+          <li><a class="dropdown-item" href="#">Registrati</a></li>
+
         </ul>
-      </div>
-
-        <div>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">Impostazioni e privacy</a></li>
-              <li><a class="dropdown-item" href="#">Assistenze e supporto</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Accessibilità</a></li>
-            </ul>
-          </li>
-        </div>
-
       
     </div>
+
+
+  </div>
   </div>
 </nav>
