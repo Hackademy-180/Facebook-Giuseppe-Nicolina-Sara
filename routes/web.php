@@ -5,3 +5,4 @@ use Illuminate\Support\Facades\Route;
 //homepage
 Route::get('/', [FaceController::class, 'home'])->name("welcome");
 //index rotta
+Route::post('/', [FaceController::class, 'store'])->name("welcome");

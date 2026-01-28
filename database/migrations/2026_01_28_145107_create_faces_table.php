@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('faces', function (Blueprint $table) {
             $table->id();
+            $table->string("title");
+            $table->text("content");
+            $table->string("mood");
+            $table->string("img")->default("/media/default.png");
             $table->timestamps();
         });
     }

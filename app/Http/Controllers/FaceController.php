@@ -15,6 +15,7 @@ class FaceController extends Controller
      */
     public function home()
     {
+        // $faces=Face::all();
         return view('welcome');
     }
 
@@ -23,7 +24,7 @@ class FaceController extends Controller
      */
     public function create()
     {
-        //
+        // 
     }
 
     /**
@@ -31,7 +32,13 @@ class FaceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Face::create([
+            "title"=>$request->title,
+            "content"=>$request->content,
+            "mood"=>$request->mood,
+            "img"=>$request->file("img") ? $request->file("img")->store("image", "public") : "/media/default.png"
+        ]);
+        return view('welcome');
     }
 
     /**
@@ -39,7 +46,7 @@ class FaceController extends Controller
      */
     public function show(Face $face)
     {
-        //
+        // 
     }
 
     /**
