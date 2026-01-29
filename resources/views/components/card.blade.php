@@ -1,6 +1,7 @@
 <div class="card mt-5">
   <img src="{{Storage::url($face->img)}}" class="card-img-top" alt="...">
   <div class="card-body text-center">
+    
     <h4 class="card-title text-center">{{$face->title}}</h4>
     <p class="card-text">{{$face->content}}</p>
       <p class="card-text">{{$face->mood}}</p>

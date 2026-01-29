@@ -54,8 +54,8 @@
           <li>
             <hr class="dropdown-divider">
           </li>
-          <li><a class="dropdown-item" href="#">Login</a></li>
-          <li><a class="dropdown-item" href="#">Registrati</a></li>
+          <li><a class="dropdown-item" href="{{route("login")}}">Login</a></li>
+          <li><a class="dropdown-item" href="{{route("register")}}">Registrati</a></li>
 
         </ul>
       

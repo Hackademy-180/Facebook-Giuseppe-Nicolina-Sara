@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Face;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\Routing\Route;
 
 class FaceController extends Controller
@@ -38,7 +39,8 @@ class FaceController extends Controller
             "title" => $request->title,
             "content" => $request->content,
             "mood" => $request->mood,
-            "img" => $request->file("img") ? $request->file("img")->store("image", "public") : "/media/default.png"
+            "img" => $request->file("img") ? $request->file("img")->store("image", "public") : "/media/default.png",
+            "user_id"=>Auth::user()->id
         ]);
         return redirect(route('welcome'));
     }
