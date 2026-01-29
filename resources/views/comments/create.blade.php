@@ -3,15 +3,16 @@
         <section class="row justify-content-center mt-5">
             <div class="col-12 col-md-6">
                 <div class="mb-3">
-                    <span>{{Auth::user()->name}} ha commentato: </span>
-                    <form method="POST" action="{{route("comment_store", compact("comment"))}}">
+                    {{-- <span>{{Auth::user()->name}} ha commentato: </span> --}}
+                    <form method="POST" action="{{route("comment_store")}}">
                     @csrf
-                    <label for="exampleFormControlTextarea1" class="form-label"></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-
+                    
+                    <label for="content" class="form-label"></label>
+                    <textarea class="form-control" id="content" rows="3" name="content"></textarea>
+                    
+                    <button class="btn btn-primary" type="submit">Commenta</button>
                     </form>
                 </div>
-                <button class="btn btn-primary" type="submit">Commenta</button>
             </div>
         </section>
     </main>
