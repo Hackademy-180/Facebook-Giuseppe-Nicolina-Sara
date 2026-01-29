@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Face;
 use Illuminate\Http\Request;
+use Symfony\Component\Routing\Route;
 
 class FaceController extends Controller
 {
@@ -15,8 +16,8 @@ class FaceController extends Controller
      */
     public function home()
     {
-        $faces=Face::all();
-        return view('welcome',compact("faces"));
+        $faces = Face::all();
+        return view('welcome', compact("faces"));
     }
 
     /**
@@ -24,8 +25,8 @@ class FaceController extends Controller
      */
     public function create()
     {
-        
-        return view("welcome"); 
+
+        return view("welcome");
     }
 
     /**
@@ -34,12 +35,12 @@ class FaceController extends Controller
     public function store(Request $request)
     {
         Face::create([
-            "title"=>$request->title,
-            "content"=>$request->content,
-            "mood"=>$request->mood,
-            "img"=>$request->file("img") ? $request->file("img")->store("image", "public") : "/media/default.png"
+            "title" => $request->title,
+            "content" => $request->content,
+            "mood" => $request->mood,
+            "img" => $request->file("img") ? $request->file("img")->store("image", "public") : "/media/default.png"
         ]);
-        return view('welcome');
+        return redirect(route('welcome'));
     }
 
     /**

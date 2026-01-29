@@ -12,7 +12,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
                             <div class="modal-body">
-                                <form method="POST" action="" enctype="multipart/form-data">
+                                <form method="POST" action="{{route ("post_store")}}" enctype="multipart/form-data">
                                     @csrf
                                     <div class="mb-3">
                                         <label for="title" class="form-label">Titolo:</label>
@@ -30,12 +30,14 @@
                                         <label for="img" class="form-label">Immagine:</label>
                                         <input type="file" class="form-control" id="img" placeholder="" name="img">
                                     </div>
+                                        
+                                    <div class="modal-footer">
+                                          <button class="modal-btn" type="" data-bs-dismiss="modal">Anulla</button>
+                                          <button class="modal-btn" type="submit" data-bs-dismiss="modal">Crea post</button>
+                                    </div>
+                                </form>
                             </div>
-    
-                            <div class="modal-footer">
-                                <button class="modal-btn" type="submit" data-bs-dismiss="modal">Anulla</button>
-                                <button class="modal-btn" type="submit" data-bs-dismiss="modal">Crea post</button>
-                            </div>
+                            
     
                         </div>
                     </div>
@@ -45,7 +47,7 @@
             </div>
         </section>
         @foreach ($faces as $face)
-        <x-card/>
+        <x-card :face="$face"/>
         @endforeach
     </main>
 </x-layout>
