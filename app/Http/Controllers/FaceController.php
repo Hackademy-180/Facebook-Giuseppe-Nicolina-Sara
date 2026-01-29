@@ -48,7 +48,7 @@ class FaceController extends Controller
      */
     public function show(Face $face)
     {
-        //  
+        return view('faces.detail', compact('face'));
     }
 
     /**
@@ -56,7 +56,7 @@ class FaceController extends Controller
      */
     public function edit(Face $face)
     {
-        //
+        return view('faces.edit', compact('face'));
     }
 
     /**
