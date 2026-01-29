@@ -11,13 +11,13 @@
             <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </button> --}} -->
-
+        
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
         <i class="fa-solid fa-magnifying-glass fa-1x" type="submit"></i>
       </form>
     </div>
-
-
+    
+    
     <div class="d-flex">
       <ul class="navbar-nav mb-2 mb-lg-0 gap-5">
         <li class="nav-item">
@@ -34,7 +34,7 @@
         </li>
       </ul>
     </div>
-
+    
     <div class="d-flex align-items-center gap-4">
       <button type="button" class="btn position-relative ring-bell">
         <i class="fa-solid fa-bell fa-lg"></i>
@@ -45,23 +45,53 @@
       </button>
       
       <i class="fa-brands fa-facebook-messenger fa-lg"></i>
-        <a class="nav-link dropdown-toggle link-img me-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="https://picsum.photos/300/200" alt="" class="icon-right">
+      <a class="nav-link dropdown-toggle link-img me-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://picsum.photos/300/200" alt="" class="icon-right">
+      </a>
+      @auth
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Benvenut*
+          <i class="fa-regular fa-user"></i> {{Auth::user()->name}}
         </a>
-        <ul class="dropdown-menu dropdown-menu-end">
+        <ul class="dropdown-menu">
+          
+          <li>
+            <form action="{{route ("logout")}}" method="POST">
+              @csrf
+              <button class="dropdown-items trash" type="submit"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</button>
+            </form>
+          </li>
+        </ul>
+      </li>
+      
+      @else
+      <li class="nav-item dropdown list-unstyled">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Benvenut*
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Impostazioni e privacy</a></li>
           <li><a class="dropdown-item" href="#">Assistenze e supporto</a></li>
           <li>
             <hr class="dropdown-divider">
           </li>
-          <li><a class="dropdown-item" href="{{route("login")}}">Login</a></li>
-          <li><a class="dropdown-item" href="{{route("register")}}">Registrati</a></li>
-
+          <li><a class="dropdown-item" href="{{route('login')}}">Login<i class="fa-regular fa-user icon-right"></i></a></li>
+          <li><a class="dropdown-item" href="{{route('register')}}">Registrati<i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+          
         </ul>
-      
-    </div>
+      </li>
+      @endauth
+    </ul>
+    
+    
+    
+   
+    
+  </ul>
+  
+</div>
 
 
-  </div>
-  </div>
+</div>
+</div>
 </nav>
