@@ -44,5 +44,8 @@
                 <i class="fa-regular fa-file-image fa-2x" style="color: #054d00;"></i>
             </div>
         </section>
+        @foreach ($faces as $face)
+        <x-card/>
+        @endforeach
     </main>
 </x-layout>

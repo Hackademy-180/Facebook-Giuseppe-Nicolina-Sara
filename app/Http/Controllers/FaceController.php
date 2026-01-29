@@ -15,8 +15,8 @@ class FaceController extends Controller
      */
     public function home()
     {
-        // $faces=Face::all();
-        return view('welcome');
+        $faces=Face::all();
+        return view('welcome',compact("faces"));
     }
 
     /**
@@ -24,7 +24,8 @@ class FaceController extends Controller
      */
     public function create()
     {
-        // 
+        
+        return view("welcome"); 
     }
 
     /**
@@ -46,7 +47,7 @@ class FaceController extends Controller
      */
     public function show(Face $face)
     {
-        // 
+        //  
     }
 
     /**
