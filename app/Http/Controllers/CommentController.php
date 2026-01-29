@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comment;
+use App\Models\Face;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
@@ -12,7 +14,8 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+        $comments = Comment::all();
+        return view("comments.detail", compact('comments'));
     }
 
     /**
@@ -26,9 +29,13 @@ class CommentController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Face $face)
     {
-        //
+        $face->comments()->create([
+            'content' => $request->content,
+            'user_id' => Auth::user()->id,
+        ]);
+        return back();
     }
 
     /**
@@ -36,7 +43,7 @@ class CommentController extends Controller
      */
     public function show(Comment $comment)
     {
-        //
+        return view("comments.detail");
     }
 
     /**
@@ -60,6 +67,7 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
-        //
+        $comment->delete();
+        return redirect(route('welcome'));
     }
 }

@@ -13,7 +13,7 @@ Route::get('/face/edit/{face}', [FaceController::class, 'edit'])->name('post_edi
 
 // Rotta comments
 
-Route::get('/welcome', [CommentController::class, 'create'])->name('comment_create');
 Route::post('/comment/store', [CommentController::class, 'store'])->name('comment_store');
-Route::get('/comment/detail/{comment}', [CommentController::class, 'show'])->name('comment_detail');
-
+Route::get('/comment/create/', [CommentController::class, 'create'])->name('comment_create');
+Route::get('/comment/detail/{comment}', [CommentController::class, 'index'])->name('comment_detail');
+Route::delete("/comments/destroy/{comment}", [CommentController::class, "destroy"])->name("comment_destroy");

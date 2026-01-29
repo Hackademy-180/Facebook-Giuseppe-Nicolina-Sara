@@ -40,7 +40,7 @@ class FaceController extends Controller
             "content" => $request->content,
             "mood" => $request->mood,
             "img" => $request->file("img") ? $request->file("img")->store("image", "public") : "/media/default.png",
-            "user_id"=>Auth::user()->id
+            "user_id" => Auth::user()->id
         ]);
         return redirect(route('welcome'));
     }
@@ -50,14 +50,13 @@ class FaceController extends Controller
      */
     public function show(Face $face)
     {
-        return view('comments.detail', compact('face'));
+        return view('comments.create', compact('face'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Face $face){
-    }
+    public function edit(Face $face) {}
 
     /**
      * Update the specified resource in storage.
