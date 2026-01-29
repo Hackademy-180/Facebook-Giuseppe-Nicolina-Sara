@@ -18,6 +18,7 @@ class FaceController extends Controller
     public function home()
     {
         $faces = Face::all();
+        $faces = Face::latest()->get(); //per i mettere i post in ordine descrescente
         return view('welcome', compact("faces"));
     }
 

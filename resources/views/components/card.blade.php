@@ -9,6 +9,7 @@
       <a href="#" class="btn"><i class="fa-regular fa-thumbs-up fa-1x"></i> Mi piace</a>
       <a href="{{route('post_detail', compact('face'))}}" class="btn"><i class="fa-regular fa-comment"></i> Commenta</a>
       <a href="#" class="btn"><i class="fa-solid fa-share-nodes"></i> Condividi</a>
+      <a href="{{route('comment_detail')}}" class="btn"><i class="fa-solid fa-align-justify"></i> Tutti i commenti</a>
     </div>
   </div>
 </div>

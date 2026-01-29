@@ -10,7 +10,7 @@
                     <label for="content" class="form-label"></label>
                     <textarea class="form-control" id="content" rows="3" name="content"></textarea>
                     
-                    <button class="btn btn-primary" type="submit">Commenta</button>
+                    <button class="btn btn-primary mt-3" type="submit">Commenta</button>
                     </form>
                 </div>
             </div>
