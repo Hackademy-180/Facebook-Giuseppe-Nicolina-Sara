@@ -47,7 +47,9 @@
             </div>
         </section>
         @foreach ($faces as $face)
-        <x-card :face="$face"/>
+        <article class="col-12 d-flex justify-content-center">
+            <x-card :face="$face"/>
+        </article>
         @endforeach
     </main>
 </x-layout>

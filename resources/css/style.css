@@ -11,10 +11,11 @@
     color:rgb(44, 44, 194);
 }
 .link-img {
-    width: 42px;
+    width: 57px;
     height: 42px;
     border-radius: 6px;
     padding: 0;
+    margin-right:85px;
 }
 
 .icon-right {
@@ -23,7 +24,11 @@
     object-fit: cover;
     border-radius: 20px;
 }
-
+.icon-drop{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+}
 .ring-bell{
     width:15%;
 }

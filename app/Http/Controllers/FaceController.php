@@ -50,15 +50,13 @@ class FaceController extends Controller
      */
     public function show(Face $face)
     {
-        return view('faces.detail', compact('face'));
+        return view('comments.detail', compact('face'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Face $face)
-    {
-        return view('faces.edit', compact('face'));
+    public function edit(Face $face){
     }
 
     /**

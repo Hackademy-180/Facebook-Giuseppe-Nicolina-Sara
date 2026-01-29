@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     <div class="col-auto d-flex justify-content-end">
-                        <button type="submit" class="btn btn-warning mb-3">Login</button>
+                        <button type="submit" class="btn btn-primary mb-3">Login</button>
                     </div>
                 </form>
             </article>

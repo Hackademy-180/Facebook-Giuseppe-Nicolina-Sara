@@ -4,6 +4,8 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Face;
+use App\Models\Comment;
+use App\Models\Profile;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -48,5 +50,11 @@ class User extends Authenticatable
     }
     public function face(){
         return $this->hasMany(Face::class);
+    }
+    public function profile(){
+        return $this->hasOne(Profile::class);
+    }
+    public function comment(){
+        return $this->hasMany(Comment::class);
     }
 }

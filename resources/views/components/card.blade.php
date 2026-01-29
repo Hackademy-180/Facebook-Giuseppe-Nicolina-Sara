@@ -1,4 +1,4 @@
-<div class="card mt-5">
+<div class="card w-75  mt-5">
   <img src="{{Storage::url($face->img)}}" class="card-img-top" alt="...">
   <div class="card-body text-center">
     
