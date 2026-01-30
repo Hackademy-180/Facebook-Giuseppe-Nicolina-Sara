@@ -52,7 +52,7 @@
             <img src="https://picsum.photos/300/200" alt="" class="icon-right"> {{Auth::user()->name}}
             </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a href="" class="d-flex align-items-center gap-2 text-decoration-none text-black"><img src="https://picsum.photos/300/200" alt="" class="icon-drop"> {{Auth::user()->name}}
+            <li><a href="{{route("profile_index")}}" class="d-flex align-items-center gap-2 text-decoration-none text-black"><img src="https://picsum.photos/300/200" alt="" class="icon-drop"> {{Auth::user()->name}}
             </a></li>
             <li><a class="dropdown-item" href="#">Impostazioni e privacy</a></li>
             <li><a class="dropdown-item" href="#">Assistenze e supporto</a></li>

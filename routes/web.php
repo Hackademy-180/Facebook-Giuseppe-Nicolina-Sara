@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FaceController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 //homepage
 Route::get('/', [FaceController::class, 'home'])->name("welcome");
@@ -17,3 +18,5 @@ Route::post('/comment/store', [CommentController::class, 'store'])->name('commen
 Route::get('/comment/create/', [CommentController::class, 'create'])->name('comment_create');
 Route::get('/comment/detail/', [CommentController::class, 'show'])->name('comment_detail');
 Route::delete("/comments/destroy/{comment}", [CommentController::class, "destroy"])->name("comment_destroy");
+// Rotta profilo
+Route::get('/profiles/index', [ProfileController::class, 'index'])->name('profile_index');
