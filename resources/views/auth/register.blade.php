@@ -7,22 +7,30 @@
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">Name:</label>
-                        <input type="text" class="form-control" id="name" name="name">
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                     <div class="mb-3">
+                        <label for="surname" class="form-label">cognome:</label>
+                        <input type="text" class="form-control" id="surname" name="surname" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="birth_date" class="form-label">data di nascita:</label>
+                        <input type="date" class="form-control" id="birth_date" name="birth_date" required>
                     </div>
                      <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="mario@rossi.com" name="email">
+                        <input type="email" class="form-control" id="email" placeholder="mario@rossi.com" name="email" >
                     </div>
                     <div class="mb-3">
                         <label for="password" class="col-sm-2 col-form-label">Password:</label>
                         <div class="">
-                            <input type="password" class="form-control" id="password" name="password">
+                            <input type="password" class="form-control" id="password" name="password"  required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="confirmpassword" class="col-sm-2 col-form-label">Conferma Password:</label>
                         <div class="">
-                            <input type="password" class="form-control" id="confirmpassword" name="password_confirmation">
+                            <input type="password" class="form-control" id="confirmpassword" name="password_confirmation" required>
                         </div>
                     </div>
                     <div class="col-auto d-flex justify-content-end">

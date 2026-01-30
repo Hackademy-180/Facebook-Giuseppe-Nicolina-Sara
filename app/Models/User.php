@@ -22,6 +22,8 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'surname',
+        'birthday',
         'email',
         'password',
     ];
@@ -48,13 +50,16 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    public function face(){
+    public function face()
+    {
         return $this->hasMany(Face::class);
     }
-    public function profile(){
+    public function profile()
+    {
         return $this->hasOne(Profile::class);
     }
-    public function comment(){
+    public function comment()
+    {
         return $this->hasMany(Comment::class);
     }
 }
