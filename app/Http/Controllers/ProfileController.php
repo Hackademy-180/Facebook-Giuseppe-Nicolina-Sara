@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Profile;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view("profiles.index");
+        // return view("profiles.index");
     }
 
     /**
@@ -36,7 +37,8 @@ class ProfileController extends Controller
      */
     public function show(Profile $profile)
     {
-        //
+        // $profiles= Profile::all();
+        return view("profiles.index");
     }
 
     /**
@@ -44,7 +46,8 @@ class ProfileController extends Controller
      */
     public function edit(Profile $profile)
     {
-        //
+        $users= User::all();
+        return view('profiles.edit', compact('users', 'profile'));
     }
 
     /**
@@ -52,7 +55,16 @@ class ProfileController extends Controller
      */
     public function update(Request $request, Profile $profile)
     {
-        //
+        $profile->update([
+            'name'=>$request->name,
+            'surname'=>$request->surname,
+            'birthday'=>$request->birthday,
+            'bio'=>$request->bio,
+            'img'=>$request->file('img') ? $request->file('img')->store('image', 'public'): null,
+
+        ]);
+        return redirect(route('profile_index', compact('profile')));
+
     }
 
     /**

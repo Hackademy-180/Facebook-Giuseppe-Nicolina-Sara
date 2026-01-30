@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
+            //Andare sulla cartella app/actions/fortify->createnewuser e aggiungere surname e birthday
             $table->string('surname')->nullable()->after('name');
             $table->date('birthday')->nullable()->after('surname');
         });

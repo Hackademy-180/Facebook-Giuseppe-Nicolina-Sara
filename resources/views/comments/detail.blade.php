@@ -8,7 +8,7 @@
                         <a href="" class="d-flex align-items-center gap-2 text-decoration-none text-black"><img src="https://picsum.photos/300/200" alt="" class="icon-drop"></a>
                         <span>{{Auth::user()->name}} ha commentato: </span>
                     </div>
-                    
+                    <!-- -->
                     <div class="card d-flex justify-content-evenly mt-3">
                         <div class="card-body d-flex align-items-center gap-3 justify-content-center">
                             <p>{{$comment->content}}</p>

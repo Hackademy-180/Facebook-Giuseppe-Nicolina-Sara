@@ -10,12 +10,12 @@
                         <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                      <div class="mb-3">
-                        <label for="surname" class="form-label">cognome:</label>
+                        <label for="surname" class="form-label">Cognome:</label>
                         <input type="text" class="form-control" id="surname" name="surname" required>
                     </div>
                     <div class="mb-3">
-                        <label for="birth_date" class="form-label">data di nascita:</label>
-                        <input type="date" class="form-control" id="birth_date" name="birth_date" required>
+                        <label for="birthday" class="form-label">Data di nascita:</label>
+                        <input type="date" class="form-control" id="birthday" name="birthday" required>
                     </div>
                      <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>

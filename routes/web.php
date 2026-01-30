@@ -19,4 +19,6 @@ Route::get('/comment/create/', [CommentController::class, 'create'])->name('comm
 Route::get('/comment/detail/', [CommentController::class, 'show'])->name('comment_detail');
 Route::delete("/comments/destroy/{comment}", [CommentController::class, "destroy"])->name("comment_destroy");
 // Rotta profilo
-Route::get('/profiles/index', [ProfileController::class, 'index'])->name('profile_index');
+Route::get('/profiles/index', [ProfileController::class, 'show'])->name('profile_index');
+Route::get('/profiles/edit/{profile}', [ProfileController::class, 'edit'])->name('profile_edit');
+Route::put('/profile/update/{profile}', [ProfileController::class, 'update'])->name('profile_update');

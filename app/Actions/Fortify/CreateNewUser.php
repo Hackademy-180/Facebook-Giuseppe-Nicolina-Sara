@@ -21,6 +21,8 @@ class CreateNewUser implements CreatesNewUsers
     {
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
+            'surname'=>['nullable', 'string', 'max:255'], // piccole accortezze per l'aggiunta del surname 
+            'birthday'=>['nullable', 'date'], //e birthday
             'email' => [
                 'required',
                 'string',
@@ -33,6 +35,8 @@ class CreateNewUser implements CreatesNewUsers
 
         return User::create([
             'name' => $input['name'],
+            'surname'=>$input['surname'] ?? null,  //anche nel create aggiungere surname 
+            'birthday' => $input['birthday'] ?? null, //e birthday
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
         ]);
