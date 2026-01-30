@@ -80,6 +80,15 @@
     font-size: 1.5em;
 }
 
+header {
+    background: url("https://picsum.photos/1920/400");
+    background-position: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+.btn-modify{
+    margin-bottom:80px;
+}
 
 /* /*bottoni profilo esterno */
 .Btn {
@@ -87,12 +96,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 100px;
+    width: 135px;
     height: 40px;
     border: none;
     padding: 0px 20px;
-    background-color: rgb(49, 92, 253);
-    color: white;
+    background-color: white;
+    color: black;
     font-weight: 500;
     cursor: pointer;
     border-radius: 10px;
@@ -104,21 +113,21 @@
     position: absolute;
     right: 0;
     margin-right: 20px;
-    fill: white;
+    fill: black;
     transition-duration: .3s;
 }
 
-.Btn:hover {
+/* .Btn:hover {
     color: transparent;
-}
+} */
 
-.Btn:hover svg {
+/* .Btn:hover svg {
     right: 43%;
     margin: 0;
     padding: 0;
     border: none;
     transition-duration: .3s;
-}
+} */
 
 .Btn:active {
     transform: translate(3px, 3px);
@@ -129,7 +138,7 @@
 /*bottone profilo interno*/
 .btn-profile {
     width: 20%;
-    height: 29%;
+    height: 32%;
 }
 
 /*immagine profil*/
