@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -35,10 +36,11 @@ class ProfileController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Profile $profile)
+    public function show(User $user)
     {
-        // $profiles= Profile::all();
-        return view("profiles.index");
+        $user->load('profile');
+        // dd($user);
+        return view("profiles.index", compact("user"));
     }
 
     /**

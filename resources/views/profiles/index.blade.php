@@ -14,7 +14,8 @@
          <div class="d-flex justify-content-center col-6 col-md-6">
 
             <img src="https://picsum.photos/300/200" alt="" class="icon-profile">
-            <h5 class="fw-bold ms-5 mt-3">Paniz Yahuiey</h5>
+            <h5 class="fw-bold ms-5 mt-3">{{Auth::user()->name}} {{Auth::user()->surname}}</h5>
+            
          </div>
          <div class="d-flex justify-content-center gap-2 col-6 col-md-6">
             <button class="btn btn-profile btn-primary">Aggiungi storia</button>
