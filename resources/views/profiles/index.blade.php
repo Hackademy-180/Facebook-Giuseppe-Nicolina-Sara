@@ -143,6 +143,7 @@
          </div>
          <!-- Fine modale -->
 
+         ($profile->user->favoriteFaces)
 
 
 

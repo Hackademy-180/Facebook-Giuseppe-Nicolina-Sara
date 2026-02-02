@@ -6,7 +6,7 @@
             <article class="col-12 col-md-3">
                 <div class="d-flex align-items-center gap-2">
                     <a href="" class="d-flex align-items-center gap-2 text-decoration-none text-black"><img src="https://picsum.photos/300/200" alt="" class="icon-drop"></a>
-                    <span>{{Auth::user()->name}} ha commentato: </span>
+                    <span>{{$comment->user->name}} ha commentato: </span>
                 </div>
                 <!-- -->
                 <div class="card d-flex justify-content-evenly mt-3">

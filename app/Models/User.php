@@ -62,4 +62,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Comment::class);
     }
+    public function favoriteFaces()
+    {
+    return $this->belongsToMany(Face::class, 'face_user');
+    }
 }

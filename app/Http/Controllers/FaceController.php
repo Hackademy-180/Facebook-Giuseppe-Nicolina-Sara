@@ -27,7 +27,7 @@ class FaceController extends Controller
      */
     public function create()
     {
-
+        
         return view("welcome");
     }
 
@@ -73,5 +73,9 @@ class FaceController extends Controller
     public function destroy(Face $face)
     {
         //
+    }
+    public function favoriteFace(Face $face){
+        $face->favoriteUsers()->attach(Auth::user()->id);
+        return redirect()->back();
     }
 }

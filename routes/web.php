@@ -18,7 +18,11 @@ Route::post('/comment/store', [CommentController::class, 'store'])->name('commen
 Route::get('/comment/create/', [CommentController::class, 'create'])->name('comment_create');
 Route::get('/comment/detail/', [CommentController::class, 'show'])->name('comment_detail');
 Route::delete("/comments/destroy/{comment}", [CommentController::class, "destroy"])->name("comment_destroy");
+Route::get("/comments/edit/{comment}", [CommentController::class, "edit"])->name("comment_edit");
+
 // Rotta profilo
 Route::get('/profiles/index/{profile}', [ProfileController::class, 'show'])->name('profile_index');
 Route::get('/profiles/edit/{profile}', [ProfileController::class, 'edit'])->name('profile_edit');
 Route::put('/profile/update/{profile}', [ProfileController::class, 'update'])->name('profile_update');
+// Rotte post preferiti
+Route::post("/face/favorite/{face}", [FaceController::class, "favoriteFace"])->name("face_favorite");
