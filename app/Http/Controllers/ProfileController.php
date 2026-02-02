@@ -30,17 +30,25 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $profile= Profile::create([
+            'name'=>$request->name,
+            'surname'=>$request->surname,
+            'birthday'=>$request->birthday,
+            'bio'=>$request->bio,
+            'img'=>$request->file('img') ? $request->file('img')->store('image', 'public'): null,
+            'user_id'=> Auth::user()->id,
+            
+            ]);
+
+            return redirect(route('profile_index'));
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(User $user)
+    public function show(Profile $profile)
     {
-        $user->load('profile');
-        // dd($user);
-        return view("profiles.index", compact("user"));
+        return view("profiles.index", compact("profile"));
     }
 
     /**

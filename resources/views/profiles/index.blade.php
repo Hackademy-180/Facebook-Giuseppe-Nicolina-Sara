@@ -23,7 +23,7 @@
             <img src="https://picsum.photos/300/200" alt="" class="icon-profile">
             <div class="d-flex flex-column mt-4">
                <div class="d-flex flex-column">
-                  <h5 class="fw-bold ms-3 h-25 mt-2">{{Auth::user()->name}} {{Auth::user()->surname}}</h5>
+                  <h5 class="fw-bold ms-3 h-25 mt-2">{{$profile->name}} {{$profile->surname}}</h5>
                   <span class="ms-3 mt-1">278 amici</span>
                </div>
                <div class="d-flex justify-content-center gap-3 ms-2 ">
@@ -31,12 +31,13 @@
                   <span><i class="fa-solid fa-briefcase"></i> Preply</span>
                   <span><i class="fa-solid fa-building-columns"></i> Università di Torino</span>
                </div>
+               <span class="bio ms-3 mt-3">{{$profile->bio}}</span>
             </div>
          </div>
          <!-- Seconda meta schermo -->
          <div class="d-flex justify-content-center gap-2 col-6 col-md-6 mt-4 div-second-part">
             <button class="btn btn-profile btn-primary"><i class="fa-solid fa-plus"></i> Aggiungi storia</button>
-            <a href="{{route('profile_edit')}}" class="btn btn-primary btn-profile"><i class="fa-solid fa-pencil"></i> Modifica profilo</a>
+            <a href="{{route('profile_edit', compact('profile'))}}" class="btn btn-primary btn-profile"><i class="fa-solid fa-pencil"></i> Modifica profilo</a>
          </div>
 
          <div class="d-flex gap-5 ms-5 mt-3">
@@ -57,7 +58,7 @@
             <div class="d-flex flex-column gap-4 mt-3">
                <a href="" class="text-dark text-decoration-none"><i class="fa-solid fa-location-dot fa-2x"></i><span class="fw-bold"> Torino</span></a>
                <a href="" class="text-dark text-decoration-none"><i class="fa-regular fa-house fa-2x"></i><span class="fw-bold"> Di Teheran</span></a>
-               <a href="" class="text-dark text-decoration-none"><i class="fa-solid fa-cake-candles fa-2x"></i><span class="fw-bold"> {{Auth::user()->birthday}}</span></a>
+               <a href="" class="text-dark text-decoration-none"><i class="fa-solid fa-cake-candles fa-2x"></i><span class="fw-bold"> {{$profile->birthday}}</span></a>
                <a href="" class="text-dark text-decoration-none"><i class="fa-solid fa-people-roof fa-2x"></i><span class="fw-bold"> Familiari</span></a>
                <a href="" class="text-dark text-decoration-none"><i class="fa-solid fa-venus fa-2x"></i><span class="fw-bold"> Donna</span></a>
                <a href="" class="text-dark text-decoration-none"><i class="fa-solid fa-language fa-2x"></i><span class="fw-bold"> English language, Persian language, Italian language</span></a>
