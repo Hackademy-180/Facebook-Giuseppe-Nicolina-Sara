@@ -31,11 +31,12 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        Comment::create([
+        $comment = Comment::create([
             'content' => $request->content,
-            // 'user_id' => Auth::user()->id,
+            'user_id' => Auth::user()->id,
+
         ]);
-        return redirect(route("comment_detail"));
+        return redirect(route("comment_detail", compact('comment')));
     }
 
     /**
