@@ -4,7 +4,7 @@
         <section class="row mt-5 g-4">
             @foreach($comments as $comment)
             <article class="col-12 col-md-3">
-                <div class="d-flex align-items-center gap-2">
+                <div class="d-flex justify-content-center align-items-center gap-2">
                     <a href="" class="d-flex align-items-center gap-2 text-decoration-none text-black"><img src="https://picsum.photos/300/200" alt="" class="icon-drop"></a>
                     <span>{{$comment->user->name}} ha commentato: </span>
                 </div>
@@ -13,21 +13,21 @@
                     <div class="card-body d-flex align-items-center gap-3 justify-content-center">
                         <p>{{$comment->content}}</p>
                     </div>
-                    
                 </div>
-                <ul>
-                    <span>{{ $comment->created_at }}</span>
+                <ul class="d-flex align-items-center">
+                    <span class="mt-2">{{ $comment->created_at }}</span>
                     @if(Auth::id()==$comment->user->id)
                     <form method="POST" action="{{route('comment_destroy', compact('comment'))}}">
                         @csrf
                         @method('DELETE')
-                        <button>
+                        <button class="btn">
                             <i class="fa-solid fa-eraser ms-5" style="color: #d72714;"></i>
                         </button>
                     </form>
                     @endif
-                    
-                    <i class="fa-solid fa-highlighter" style="color: #005eff;"></i>
+                    <button class="btn"> <!-- Bottone modifica-->
+                        <i class="fa-solid fa-highlighter" style="color: #005eff;"></i>
+                    </button>
                 </ul>
             </article>
             

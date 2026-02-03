@@ -24,14 +24,14 @@
             <div class="d-flex flex-column mt-4">
                <div class="d-flex flex-column">
                   <h5 class="fw-bold ms-3 h-25 mt-2">{{$profile->name}} {{$profile->surname}}</h5>
-                  <span class="ms-3 mt-1">278 amici</span>
+                  <span class="ms-4 mt-1">278 amici</span>
                </div>
-               <div class="d-flex justify-content-center gap-3 ms-2 ">
+               <div class="d-flex justify-content-center gap-3 me-3">
                   <span><i class="fa-solid fa-location-dot"></i> Torino</span>
                   <span><i class="fa-solid fa-briefcase"></i> Preply</span>
                   <span><i class="fa-solid fa-building-columns"></i> Università di Torino</span>
                </div>
-               <span class="bio ms-3 mt-3">{{$profile->bio}}</span>
+               <span class="bio ms-4 mt-3">{{$profile->bio}}</span>
             </div>
          </div>
          <!-- Seconda meta schermo -->
@@ -103,6 +103,15 @@
                <a href="" class="fw-bold text-decoration-none text-secondary"><i class="fa-regular fa-images fa-1x" style="color: #276100;"></i> Foto/Video</a>
                <a href="" class="fw-bold text-decoration-none text-secondary"><i class="fa-solid fa-flag fa-1x" style="color: #74C0FC;"></i> Aggiornamento importante</a>
             </div>
+            @foreach ($profile->user->favoriteFaces as $face) <!-- Dal profilo vado all’utente, dall’utente prendo i post preferiti, li scorro uno alla volta e passo ogni Face alla card. Profile → User → favoriteFaces (collection) → foreach → Face singolo → component. Mai passare una collection a una card: prima foreach, poi il singolo modello.-->
+            <article class="d-flex justify-content-center">
+               <x-card :face="$face" />
+            </article>
+            @endforeach
+         </div>
+         <div>
+
+            
          </div>
          <!-- la modale -->
          <div class="modal fade" id="createPostModal" tabindex="-1" aria-hidden="true">
@@ -142,11 +151,6 @@
             </div>
          </div>
          <!-- Fine modale -->
-
-         ($profile->user->favoriteFaces)
-
-
-
 
       </section>
 

@@ -15,7 +15,7 @@
         @if(!(Auth::user()->favoriteFaces->contains($face->id)))
         <form action="{{route("face_favorite", compact("face"))}}" method="POST">
           @csrf
-          <button  type="submit" >  
+          <button class="btn" type="submit" >  
             <i class="fa-regular fa-heart" style="color: #ff0000;"></i>
           </button>
         </form>
