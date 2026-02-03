@@ -33,7 +33,9 @@
                             <input type="password" class="form-control" id="confirmpassword" name="password_confirmation" >
                         </div>
                     </div>
-                    <div class="col-auto d-flex justify-content-end">
+                    <div class="col-auto d-flex justify-content-between align-items-center">
+                        <a href="{{route('login')}}">Se hai già un account! Accedi qui!</a>
+
                        <button type="submit" class="btn btn-primary mb-3">Registrati</button>
                     </div>
                 </form>

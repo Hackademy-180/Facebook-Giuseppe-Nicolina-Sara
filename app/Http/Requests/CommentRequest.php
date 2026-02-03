@@ -30,8 +30,8 @@ class CommentRequest extends FormRequest
     {
         return [
 
-            'content.required' => 'questo campo e obbligatorio',
-            'content.max' => 'deve contenere massimo 62 caratteri'
+            'content.required' => 'Questo campo è obbligatorio!',
+            'content.max' => 'Deve contenere massimo 62 caratteri!'
 
 
         ];

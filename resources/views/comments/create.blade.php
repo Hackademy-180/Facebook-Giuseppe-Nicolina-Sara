@@ -9,7 +9,7 @@
                     
                     <label for="content" class="form-label"></label>
                     <textarea class="form-control" id="content" rows="3" name="content"  ></textarea>
-                    @error('comment')
+                    @error('content')
                       <p class="text text-danger">
                         {{$message}}
                       </p>

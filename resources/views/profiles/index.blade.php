@@ -20,16 +20,16 @@
       <section class="row row-custom">
          <!-- Prima metà schermo -->
          <div class="col-6 col-md-6 d-flex justify-content-center div-first-part">
-            <img src="https://picsum.photos/300/200" alt="" class="icon-profile">
+            <img src="{{Storage::url($profile->img)}}" alt="" class="icon-profile">
             <div class="d-flex flex-column mt-4">
                <div class="d-flex flex-column">
                   <h5 class="fw-bold ms-3 h-25 mt-2">{{$profile->name}} {{$profile->surname}}</h5>
                   <span class="ms-4 mt-1">278 amici</span>
                </div>
                <div class="d-flex justify-content-center gap-3 me-3">
-                  <span><i class="fa-solid fa-location-dot"></i> Torino</span>
-                  <span><i class="fa-solid fa-briefcase"></i> Preply</span>
-                  <span><i class="fa-solid fa-building-columns"></i> Università di Torino</span>
+                  <span><i class="fa-solid fa-location-dot"></i>Ancona</span>
+                  <span><i class="fa-solid fa-briefcase"></i>Aulab</span>
+                  <span><i class="fa-solid fa-building-columns"></i> Università di Macerata</span>
                </div>
                <span class="bio ms-4 mt-3">{{$profile->bio}}</span>
             </div>
@@ -56,12 +56,12 @@
                <a href="" class="text-secondary"><i class="fa-regular fa-pen-to-square "></i></a>
             </div>
             <div class="d-flex flex-column gap-4 mt-3">
-               <a href="" class="text-dark text-decoration-none"><i class="fa-solid fa-location-dot fa-2x"></i><span class="fw-bold"> Torino</span></a>
-               <a href="" class="text-dark text-decoration-none"><i class="fa-regular fa-house fa-2x"></i><span class="fw-bold"> Di Teheran</span></a>
+               <a href="" class="text-dark text-decoration-none"><i class="fa-solid fa-location-dot fa-2x"></i><span class="fw-bold">Ancona</span></a>
+               <a href="" class="text-dark text-decoration-none"><i class="fa-regular fa-house fa-2x"></i><span class="fw-bold"> Bender</span></a>
                <a href="" class="text-dark text-decoration-none"><i class="fa-solid fa-cake-candles fa-2x"></i><span class="fw-bold"> {{$profile->birthday}}</span></a>
                <a href="" class="text-dark text-decoration-none"><i class="fa-solid fa-people-roof fa-2x"></i><span class="fw-bold"> Familiari</span></a>
                <a href="" class="text-dark text-decoration-none"><i class="fa-solid fa-venus fa-2x"></i><span class="fw-bold"> Donna</span></a>
-               <a href="" class="text-dark text-decoration-none"><i class="fa-solid fa-language fa-2x"></i><span class="fw-bold"> English language, Persian language, Italian language</span></a>
+               <a href="" class="text-dark text-decoration-none"><i class="fa-solid fa-language fa-2x"></i><span class="fw-bold"> English language,Italian language</span></a>
             </div>
             <div class="d-flex justify-content-between mt-4">
                <h4>Lavoro</h4>
@@ -70,8 +70,8 @@
             <div class="d-flex align-items-center">
                <img src="https://picsum.photos/300/200" alt="" class="icon-detail">
                <div class="d-flex flex-column">
-                  <h6 class="fw-bold ms-3 h-25 mt-2">Preply</h6>
-                  <span class="ms-3">Teacher english language</span>
+                  <h6 class="fw-bold ms-3 h-25 mt-2">Aulab</h6>
+                  <span class="ms-3">Front-end</span>
                   <span class="ms-3"> 11 nov 2020 - a oggi 5 anni, 2 mesi</span>
                   <p class="text-secondary ms-3 mt-3">Vedi altre informazioni lavorative</p>
 
@@ -84,7 +84,7 @@
             <div class="d-flex align-items-center">
                <img src="https://picsum.photos/300/200" alt="" class="icon-detail">
                <div class="d-flex flex-column">
-                  <h6 class="fw-bold ms-3 h-25 mt-2">Università di Torino</h6>
+                  <h6 class="fw-bold ms-3 h-25 mt-2">Università di Macerata</h6>
                   <p class="text-secondary ms-3 mt-2">Vedi altre informazioni sull'istruzione</p>
                </div>
             </div>

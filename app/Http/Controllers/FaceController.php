@@ -4,13 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Face;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\Routing\Route;
 
-class FaceController extends Controller
+class FaceController extends Controller implements HasMiddleware
 {
 
-
+    public static function middleware()
+    {
+        return [
+            'auth'
+        ];
+    }
 
     /**
      * Display a listing of the resource.
@@ -27,7 +33,7 @@ class FaceController extends Controller
      */
     public function create()
     {
-        
+
         return view("welcome");
     }
 
@@ -74,7 +80,8 @@ class FaceController extends Controller
     {
         //
     }
-    public function favoriteFace(Face $face){
+    public function favoriteFace(Face $face)
+    {
         $face->favoriteUsers()->attach(Auth::user()->id);
         return redirect()->back();
     }

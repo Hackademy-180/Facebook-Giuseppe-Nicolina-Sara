@@ -1,6 +1,7 @@
 <x-layout>
     <main class="container mt-5">
         <section class="row justify-content-center mt-3">
+            @auth
             <div class="d-flex gap-2 col-12 col-md-6 justify-content-center align-items-center form-post">
                 <img src="https://picsum.photos/300/200" alt="" class="icon-user">
                 <input class="form-control form-control-lg input-post" type="text" placeholder="A cosa stai pensando?" aria-label=".form-control-lg example" readonly data-bs-toggle="modal" data-bs-target="#createPostModal">
@@ -30,26 +31,28 @@
                                         <label for="img" class="form-label">Immagine:</label>
                                         <input type="file" class="form-control" id="img" placeholder="" name="img">
                                     </div>
-                                        
+
                                     <div class="modal-footer">
-                                          <button class="modal-btn" type="" data-bs-dismiss="modal">Anulla</button>
-                                          <button class="modal-btn" type="submit" data-bs-dismiss="modal">Crea post</button>
+                                        <button class="modal-btn" type="" data-bs-dismiss="modal">Anulla</button>
+                                        <button class="modal-btn" type="submit" data-bs-dismiss="modal">Crea post</button>
                                     </div>
                                 </form>
                             </div>
-                            
-    
+
+
                         </div>
                     </div>
                 </div>
                 <i class="fa-regular fa-face-grin-tears fa-2x" style="color: #FFD43B;"></i>
                 <i class="fa-regular fa-file-image fa-2x" style="color: #054d00;"></i>
             </div>
+            @foreach ($faces as $face)
+            <article class="col-12 d-flex justify-content-center">
+                <x-card :face="$face" />
+            </article>
+            @endforeach
         </section>
-        @foreach ($faces as $face)
-        <article class="col-12 d-flex justify-content-center">
-            <x-card :face="$face"/>
-        </article>
-        @endforeach
+        @endauth
+
     </main>
 </x-layout>
