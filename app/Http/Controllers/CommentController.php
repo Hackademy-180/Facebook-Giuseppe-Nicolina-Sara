@@ -47,7 +47,7 @@ class CommentController extends Controller
         // $comments = Comment::all();
         
         // per far visualizzare solo ultimi 6 post
-        $comments = Comment::take(6)->get();
+        $comments = Comment::latest()->take(6)->get();
 
         return view("comments.detail", compact("comments"));
     }
