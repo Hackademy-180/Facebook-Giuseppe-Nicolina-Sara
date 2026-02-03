@@ -3,9 +3,12 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.logo {
-    color: rgb(44, 44, 194);
+
+.imglogo {
+    width: 55px;
+
 }
+
 
 .nav-icon {
     width: 80px;
@@ -268,6 +271,4 @@ header {
     }
 }
 
-.registerForm{
-    
-}
+.registerForm {}

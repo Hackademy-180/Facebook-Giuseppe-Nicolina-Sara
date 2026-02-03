@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg nav-custom">
   <div class="d-flex justify-content-between w-100">
-    <div class="d-flex">
-      <a class="navbar-brand ms-3" href=""><i class="fa-brands fa-facebook fa-2x logo"></i></a>
+    <div class="d-flex  ">
+     <a class="navbar-brand ms-3  " href="/">
+    <img src="{{ asset('media/facenet2.png') }}" alt="Logo" class="imglogo ">
+</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,7 +37,7 @@
       </ul>
     </div>
 
-    <div class="d-flex align-items-center gap-4">
+    <div class="d-flex align-items-center  gap-4">
       <button type="button" class="btn position-relative ring-bell">
         <i class="fa-solid fa-bell fa-lg"></i>
         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
