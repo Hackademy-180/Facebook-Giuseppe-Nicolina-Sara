@@ -23,11 +23,12 @@
                         <button class="btn">
                             <i class="fa-solid fa-eraser ms-5" style="color: #d72714;"></i>
                         </button>
-                    </form>
+                    </form >
                     @endif
-                    <button class="btn"> <!-- Bottone modifica-->
+                    
+                    <a href="{{route("comment_edit", compact("comment"))}}" class="btn"> <!-- Bottone modifica-->
                         <i class="fa-solid fa-highlighter" style="color: #005eff;"></i>
-                    </button>
+                    </a>
                 </ul>
             </article>
             

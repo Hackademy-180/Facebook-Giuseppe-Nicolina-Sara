@@ -44,7 +44,11 @@ class CommentController extends Controller
      */
     public function show(Comment $comment)
     {
-        $comments = Comment::all();
+        // $comments = Comment::all();
+        
+        // per far visualizzare solo ultimi 6 post
+        $comments = Comment::take(6)->get();
+
         return view("comments.detail", compact("comments"));
     }
 
@@ -53,7 +57,7 @@ class CommentController extends Controller
      */
     public function edit(Comment $comment)
     {
-        //
+        return view("comments.edit", compact("comment"));
     }
 
     /**
@@ -61,7 +65,10 @@ class CommentController extends Controller
      */
     public function update(Request $request, Comment $comment)
     {
-        //
+        $comment->update([
+            'content' => $request->content,
+        ]);
+        return redirect(route("comment_detail", compact("comment")));
     }
 
     /**
