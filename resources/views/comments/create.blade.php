@@ -8,7 +8,12 @@
                     @csrf
                     
                     <label for="content" class="form-label"></label>
-                    <textarea class="form-control" id="content" rows="3" name="content"></textarea>
+                    <textarea class="form-control" id="content" rows="3" name="content"  ></textarea>
+                    @error('comment')
+                      <p class="text text-danger">
+                        {{$message}}
+                      </p>
+                    @enderror
                     
                     <button class="btn btn-primary mt-3" type="submit">Commenta</button>
                     </form>

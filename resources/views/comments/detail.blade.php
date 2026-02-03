@@ -22,13 +22,13 @@
                         @method('DELETE')
                         <button class="btn">
                             <i class="fa-solid fa-eraser ms-5" style="color: #d72714;"></i>
+                            
+                            <a href="{{route("comment_edit", compact("comment"))}}" class="btn"> <!-- Bottone modifica-->
+                                <i class="fa-solid fa-highlighter" style="color: #005eff;"></i>
+                            </a>
                         </button>
                     </form >
                     @endif
-                    
-                    <a href="{{route("comment_edit", compact("comment"))}}" class="btn"> <!-- Bottone modifica-->
-                        <i class="fa-solid fa-highlighter" style="color: #005eff;"></i>
-                    </a>
                 </ul>
             </article>
             

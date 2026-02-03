@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CommentRequest;
 use App\Models\Comment;
 
 use Illuminate\Http\Request;
@@ -29,7 +30,7 @@ class CommentController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CommentRequest $request)
     {
         $comment = Comment::create([
             'content' => $request->content,
@@ -45,7 +46,7 @@ class CommentController extends Controller
     public function show(Comment $comment)
     {
         // $comments = Comment::all();
-        
+
         // per far visualizzare solo ultimi 6 post
         $comments = Comment::latest()->take(6)->get();
 
